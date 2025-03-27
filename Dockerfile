@@ -11,7 +11,7 @@ RUN apt update --assume-yes && \
 # Clones the ComfyUI repository and checks out the latest release
 RUN git clone https://github.com/comfyanonymous/ComfyUI.git /opt/comfyui && \
     cd /opt/comfyui && \
-    git checkout tags/v0.3.7
+    git checkout tags/v0.3.27
 
 # Clones the ComfyUI Manager repository and checks out the latest release; ComfyUI Manager is an extension for ComfyUI that enables users to install
 # custom nodes and download models directly from the ComfyUI interface; instead of installing it to "/opt/comfyui/custom_nodes/ComfyUI-Manager", which
@@ -21,7 +21,7 @@ RUN git clone https://github.com/comfyanonymous/ComfyUI.git /opt/comfyui && \
 # removed; this way, the custom nodes are installed on the host machine
 RUN git clone https://github.com/ltdrdata/ComfyUI-Manager.git /opt/comfyui-manager && \
     cd /opt/comfyui-manager && \
-    git checkout tags/2.55.5
+    git checkout tags/3.31.6
 
 # Installs the required Python packages for both ComfyUI and the ComfyUI Manager
 RUN pip install \
